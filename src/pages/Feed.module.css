@@ -1,0 +1,35 @@
+.feedContainer {
+    display: grid;
+    grid-template-columns: 10% auto;
+    gap: 1rem;
+    max-height: 88dvh;
+    overflow: hidden;
+}
+
+.sidebar {
+    max-height: 88dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.main {
+    max-height: 88dvh;
+    overflow-y: auto;
+}
+@media only screen and (max-width: 1500px) {
+    .feedContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 10% auto;
+    }
+    .sidebar {
+        margin: auto 0;
+        max-height: auto;
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .main {
+        max-height: auto;
+        overflow-y: auto;
+    }
+}

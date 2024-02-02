@@ -1,0 +1,63 @@
+.container {
+    display: grid;
+    grid-template-columns: auto 25%;
+    gap: 1rem;
+    max-height: 88dvh;
+    overflow: auto;
+    margin: 0 1rem;
+}
+
+.reactPlayer {
+    margin: 0 auto;
+    height: 600px !important;
+    width: 100% !important;
+}
+.statContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    opacity: 0.8;
+}
+.descriptionContainer {
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    background-color: #f3f3f3;
+}
+.descriptionToggle {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+h2,
+h3,
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1500px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .reactPlayer {
+        margin: 0 auto;
+        height: 400px !important;
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .reactPlayer {
+        margin: 0 auto;
+        height: 250px !important;
+        width: 100% !important;
+    }
+}
