@@ -8,4 +8,11 @@
 
 .videoList li {
     list-style: none;
+    /* width: 100%; */
+}
+
+@media only screen and (max-width: 600px) {
+    .videoList li {
+        width: 100%;
+    }
 }
