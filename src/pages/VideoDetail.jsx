@@ -14,7 +14,6 @@ export function VideoDetail() {
     useEffect(() => {
         fetchFromAPI(`videos?part=snippet,statistics&id=${id}`).then((data) => {
             setVideoDetail(data.items[0]);
-            console.log(data.items[0]);
         });
         fetchFromAPI(`search?part=id,snippet&type=video&relatedToVideoId=${id}`).then((data) => {
             setVideos(data.items);
@@ -50,12 +49,14 @@ export function VideoDetail() {
                             ? description.split(" ").slice(0, 50).join(" ")
                             : description}
                     </p>
-                    <button
-                        className={styles.descriptionToggle}
-                        onClick={() => setDescriptionOpen(!descriptionOpen)}
-                    >
-                        {descriptionOpen ? "...Show less" : "Show more..."}
-                    </button>
+                    {description.split(" ").length > 50 ? (
+                        <button
+                            className={styles.descriptionToggle}
+                            onClick={() => setDescriptionOpen(!descriptionOpen)}
+                        >
+                            {descriptionOpen ? "...Show less" : "Show more..."}
+                        </button>
+                    ) : null}
                 </div>
             </main>
             <aside>

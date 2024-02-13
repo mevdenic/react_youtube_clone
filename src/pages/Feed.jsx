@@ -6,7 +6,7 @@ import styles from "./Feed.module.css";
 
 export function Feed() {
     const [selectedCategory, setSelectedCategory] = useState("New");
-    const [videos, setVideos] = useState([]);
+    const [videos, setVideos] = useState(null);
 
     useEffect(() => {
         fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) => {
@@ -26,7 +26,7 @@ export function Feed() {
                 <h1 style={{ marginTop: "10px", marginLeft: "10px" }}>
                     {selectedCategory} <span style={{ color: "#5707d6" }}>videos</span>
                 </h1>
-                <Videos videos={videos} />
+                {!videos ? <h1>Loading...</h1> : <Videos videos={videos} />}
             </main>
         </div>
     );

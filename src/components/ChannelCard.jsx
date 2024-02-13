@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { demoProfilePicture } from "../utils/constants";
 
 export function ChannelCard({ channelDetail, margin, id }) {
-    console.log(id);
     return (
         <Box
             sx={{
