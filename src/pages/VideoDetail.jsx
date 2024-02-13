@@ -59,7 +59,7 @@ export function VideoDetail() {
                     ) : null}
                 </div>
             </main>
-            <aside>
+            <aside className={styles.relatedList}>
                 {videos ? <Videos videos={videos} /> : <h2>Error fetching related videos...</h2>}
             </aside>
         </div>

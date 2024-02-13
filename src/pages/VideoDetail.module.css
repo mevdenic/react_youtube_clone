@@ -31,6 +31,10 @@
     cursor: pointer;
     font-weight: bolder;
 }
+.relatedList {
+    max-height: 88dvh;
+    overflow-y: scroll;
+}
 
 h2,
 h3,
@@ -43,6 +47,10 @@ p {
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
+    }
+    .relatedList {
+        max-height: none;
+        overflow-y: auto;
     }
 }
 
